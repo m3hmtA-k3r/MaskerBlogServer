@@ -1,0 +1,6 @@
+@MaskerBlog.API_HostAddress = http://localhost:5142
+
+GET {{MaskerBlog.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
