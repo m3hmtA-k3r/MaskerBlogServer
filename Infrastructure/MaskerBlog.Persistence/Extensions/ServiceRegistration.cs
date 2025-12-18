@@ -18,6 +18,7 @@ namespace MaskerBlog.Persistence.Extensions
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
         }
