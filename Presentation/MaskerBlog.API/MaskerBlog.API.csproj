@@ -13,11 +13,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Scalar.AspNetCore" Version="2.2.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\MaskerBlog.Application\MaskerBlog.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\MaskerBlog.Persistence\MaskerBlog.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
