@@ -12,11 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Categories\Commands\" />
-    <Folder Include="Features\Categories\Handlers\" />
-    <Folder Include="Features\Categories\Mappings\" />
     <Folder Include="Features\Categories\Validators\" />
-    <Folder Include="Features\Categories\Results\" />
-    <Folder Include="Features\Categories\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
