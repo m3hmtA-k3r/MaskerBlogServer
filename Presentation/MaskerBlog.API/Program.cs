@@ -1,5 +1,7 @@
+using MaskerBlog.API.Endpoints.Registation;
 using MaskerBlog.Application.Extensions;
 using MaskerBlog.Persistence.Extensions;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
@@ -23,5 +26,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapGroup(prefix:"api")// RouterGroupBuilder
+    .RegisterEndpoints();
 
 app.Run();
