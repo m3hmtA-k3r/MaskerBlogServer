@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace MaskerBlog.Application.Extensions
@@ -14,6 +15,8 @@ namespace MaskerBlog.Application.Extensions
             {
                 config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
             });
+
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly()); 
         }
     }
 }
