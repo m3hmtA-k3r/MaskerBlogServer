@@ -14,6 +14,7 @@ namespace MaskerBlog.Application.Extensions
             services.AddMediatR(config =>
             {
                 config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+                config.AddOpenBehavior(typeof(ValidationBehavior<,>));
             });
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly()); 
