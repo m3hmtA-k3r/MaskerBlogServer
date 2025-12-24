@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using MaskerBlog.Application.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
