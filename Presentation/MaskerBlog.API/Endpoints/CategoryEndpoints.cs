@@ -1,4 +1,5 @@
-﻿using MaskerBlog.Application.Features.Categories.Queries;
+﻿using MaskerBlog.Application.Features.Categories.Commands;
+using MaskerBlog.Application.Features.Categories.Queries;
 using MediatR;
 
 namespace MaskerBlog.API.Endpoints
@@ -9,12 +10,17 @@ namespace MaskerBlog.API.Endpoints
         {
             var categories = app.MapGroup(prefix:"/categories").WithTags("Categories");
 
-            categories.MapGet("", async (IMediator _mediator) =>
+            categories.MapGet("", async (IMediator mediator) =>
             {
-                var response = await _mediator.Send(new GetCategoryQuery());
+                var response = await mediator.Send(new GetCategoryQuery());
                 return response.IsSuccess ? Results.Ok(response) : Results.BadRequest(response);
             });
 
+            categories.MapPost(string.Empty, async (CreateCategoryCommand command, IMediator meditor) =>
+            {
+                var response = await meditor.Send(command);
+                return response.IsSuccess ? Results.Ok(response) : Results.BadRequest(response);
+            }); 
         }
 
     }
