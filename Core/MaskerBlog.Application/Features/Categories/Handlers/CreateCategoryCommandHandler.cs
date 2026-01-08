@@ -16,7 +16,7 @@ namespace MaskerBlog.Application.Features.Categories.Handlers
             var category = _mapper.Map<Category>(request);
             await _repository.CreateAsync(category);
             var result = await _unitOfWork.SaveChangesAsync();
-            return result ? BaseResult<bool>.Success(result) : BaseResult<bool>.Fail();
+            return result ? BaseResult<bool>.Success(result) : BaseResult<bool>.Fail("Category could not be Added");
         }
     }
 }
