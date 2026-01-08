@@ -28,6 +28,13 @@ namespace MaskerBlog.API.Endpoints
                 return response.IsSuccess ? Results.Ok(response) : Results.BadRequest(response);
             });
 
+            categories.MapPut(pattern:string.Empty, async (UpdateCategoryCommand command, IMediator mediator) =>
+            {
+                    var response = await mediator.Send(command);
+                    return response.IsSuccess ? Results.Ok(response) : Results.BadRequest(response);
+            });
+
+
         }
 
     }
