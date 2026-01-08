@@ -10,6 +10,8 @@ namespace MaskerBlog.Domain.Entities
         public DateTime CommentDate { get; set; }
         public virtual IList<SubComment> SubComments { get; set; } 
 
+        public Guid BlogID { get; set; }
+        public virtual Blog Blog { get; set; }
 
 
     }

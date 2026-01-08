@@ -16,4 +16,6 @@ public class Blog: BaseEntity
     public string UserId { get; set; } // Her bir Blogun bir yazarı olması gerekir.
     public virtual AppUser User { get; set; }
 
+
+    public virtual IList<Comment> Comments { get; set; } // Bir blogun birden fazla yorumu olabilir.
 }
