@@ -1,9 +1,10 @@
 ﻿using MaskerBlog.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaskerBlog.Persistence.Context
 {
-    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext<AppUser,AppRole,string>(options)
     {
         #region Entity listesi için DbSet tanımlamaları
         public DbSet<Category> Categories { get; set; }
