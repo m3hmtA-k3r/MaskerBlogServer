@@ -1,0 +1,16 @@
+﻿using MaskerBlog.Domain.Entities.Common;
+
+namespace MaskerBlog.Domain.Entities
+{
+    public class Comment : BaseEntity
+    {
+        public string UserId { get; set; }
+        public AppUser User { get; set; }
+        public string Body { get; set; }
+        public DateTime CommentDate { get; set; }
+        public IList<SubComment> SubComments { get; set; } 
+
+
+
+    }
+}

@@ -12,4 +12,8 @@ public class Blog: BaseEntity
     public Guid CategoryId { get; set; }
     public Category Category { get; set; }
     //Her Blogta sadece bir kategori olabilir.
+
+    public string UserId { get; set; } // Her bir Blogun bir yazarı olması gerekir.
+    public AppUser User { get; set; }
+
 }
