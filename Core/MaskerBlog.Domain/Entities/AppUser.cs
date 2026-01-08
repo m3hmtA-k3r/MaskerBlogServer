@@ -8,8 +8,8 @@ namespace MaskerBlog.Domain.Entities
         public string LastName { get; set; }
         public string? ImageUrl { get; set; }
 
-        public IList<Blog> Blogs { get; set; }
-        public IList<Comment> Comments { get; set; }
-        public IList<SubComment> SubComments { get; set; }
+        public virtual IList<Blog> Blogs { get; set; }
+        public virtual IList<Comment> Comments { get; set; }
+        public virtual IList<SubComment> SubComments { get; set; }
     }
 }
