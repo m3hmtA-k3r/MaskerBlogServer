@@ -16,9 +16,11 @@ namespace MaskerBlog.Application.Extensions
             {
                 config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
                 config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+              
             });
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly()); 
         }
     }
 }
+

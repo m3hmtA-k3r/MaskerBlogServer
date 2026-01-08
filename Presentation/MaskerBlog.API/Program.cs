@@ -1,3 +1,4 @@
+using MaskerBlog.API.CustomMiddlewares;
 using MaskerBlog.API.Endpoints.Registation;
 using MaskerBlog.Application.Extensions;
 using MaskerBlog.Persistence.Extensions;
@@ -21,6 +22,8 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+
+app.UseMiddleware<CustomExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
