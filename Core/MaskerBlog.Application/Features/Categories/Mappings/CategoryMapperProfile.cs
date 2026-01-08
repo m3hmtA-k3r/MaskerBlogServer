@@ -12,7 +12,7 @@ namespace MaskerBlog.Application.Features.Categories.Mappings
             CreateMap<Category, GetCategoryQueryResult>().ReverseMap();
             CreateMap<Category, CreateCategoryCommand>().ReverseMap();
             CreateMap<Category, GetCategoryByIdQueryResul>().ReverseMap(); 
-            CreateMap<Category, UpdateCategoryCommand>().ReverseMap(); 
+            CreateMap<Category, UpdateCategoryCommand>().ReverseMap();  
         }
     }
 }
