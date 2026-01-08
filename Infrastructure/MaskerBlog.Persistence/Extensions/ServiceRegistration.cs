@@ -17,6 +17,7 @@ namespace MaskerBlog.Persistence.Extensions
             {
                 options.UseSqlServer(configuration.GetConnectionString(name: "SqlConnection"));
                 options.AddInterceptors(new AuditDbContextInterceptor());
+                options.UseLazyLoadingProxies();
             });
 
             services.AddIdentity<AppUser, AppRole>(options =>
