@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using Microsoft.AspNetCore.Identity;
+using System.Text.Json.Serialization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MaskerBlog.Application.Base;
@@ -33,6 +34,14 @@ public class BaseResult<T>
         return new BaseResult<T>
         {
             Errors = [new Error { ErrorMessage = "A - An unexpected system error has occurred." }]
+        };
+    }
+
+    public static BaseResult<T> Fail(IEnumerable<IdentityError> errors)
+    {
+        return new BaseResult<T>
+        {
+            Errors = errors.Select(error => new Error { PropertyName = error.Code, ErrorMessage = error.Description })
         };
     }
 
