@@ -18,4 +18,9 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Blog\Commands\" />
+    <Folder Include="Features\Blog\Validators\" />
+  </ItemGroup>
+
 </Project>
