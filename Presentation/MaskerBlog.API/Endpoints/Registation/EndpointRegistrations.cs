@@ -7,6 +7,7 @@ namespace MaskerBlog.API.Endpoints.Registation
         {
             app.RegisterCategoryEndpoints();
             app.RegisterBlogEndPoints();
+            app.RegisterUserEndPoints();
         }
     }
 }

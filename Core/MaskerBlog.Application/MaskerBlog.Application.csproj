@@ -19,8 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Blog\Commands\" />
     <Folder Include="Features\Blog\Validators\" />
+    <Folder Include="Features\Users\Queries\" />
+    <Folder Include="Features\Users\Results\" />
   </ItemGroup>
 
 </Project>
